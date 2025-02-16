@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Om Group - Premier Property Dealers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+        }
+       
+       .hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+} 
+
+        .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.navbar {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://img.freepik.com/premium-photo/aerial-view-city-skyline-real-estate-corporate-building-business-concept-panoramic_722504-6321.jpg?w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .about-section, .contact-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://imgs.search.brave.com/o9kNgM2hUvsKciGPXYLsHaDalIKO_JKOKDHD388S-EA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/MTkzODk1L3Bob3Rv/L2JlYXV0aWZ1bC1z/d2ltbWluZy1wb29s/LWF0LWFuLWVzdGF0/ZS1ob21lLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1DZHBQ/aEduUU94eExKbnQ0/US1LZXZEMDVrTTNH/LWdpR0Q1aUxMYXRF/UURNPQ');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+        }
+               
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-info {
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .inventory-section {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3');
+            background-size: cover;
+            padding: 3rem 0;
+        }
+
+        
+        
+        .square-border-img {
+    border: 25px solid #000;
+}
+         
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  .inquiry-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.inquiry-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4a90e2, #357abd, #4a90e2);
+    animation: gradient 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.inquiry-section h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.inquiry-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+    border-radius: 2px;
+}
+
+.inquiry-section iframe {
+    max-width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    margin: 30px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.inquiry-section iframe:hover {
+    transform: translateY(-5px);
+}
+
+/* Enhanced Inventory Section */
+
+   .property-category , .inventory-section {
+            margin-bottom: 40px;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3');
+
+
+        }
+
+
+
+
+.inventory-section {
+    padding: 100px 20px;
+    background:  linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3');
+    position: relative;
+}
+
+.inventory-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, #f8f9fa 0%, transparent 100%);
+    z-index: 1;
+}
+
+.inventory-section h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    color: #2c3e50;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index: 2;
+}
+
+.inventory-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+    border-radius: 3px;
+}
+
+.property-category {
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.property-category h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    border-left: 6px solid #4a90e2;
+    position: relative;
+    display: inline-block;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 0 30px;
+}
+
+.property-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.property-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover img {
+    transform: scale(1.1);
+}
+
+.property-card h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    padding: 25px 20px;
+    margin: 0;
+    border-bottom: 2px solid #eef2f7;
+    position: relative;
+}
+
+.property-details {
+    padding: 25px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.property-details p {
+    margin: 12px 0;
+    color: #505c6e;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+.property-details p::before {
+    content: '•';
+    color: #4a90e2;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .inquiry-section h2,
+    .inventory-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .property-category h3 {
+        font-size: 2rem;
+    }
+    
+    .property-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    
+    .property-card {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    .inquiry-section iframe {
+        width: 100%;
+        height: 900px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+   .inquiry-section h2 {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Ensures the heading is centered */
+}         
+
+         .inquiry-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     }
+
+         .inquiry-section input, 
+         .inquiry-section textarea {
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 16px;
+          font-family: Arial, sans-serif;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+          }
+
+         .inquiry-section input:focus, 
+         .inquiry-form textarea:focus {
+         border-color: #4CAF50;
+         box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+         outline: none;
+         }
+
+       .inquiry-section button {
+       background-color: #4CAF50;
+        color: white;
+         padding: 14px 24px;
+        border: none;
+        border-radius: 8px;
+       cursor: pointer;
+       font-size: 18px;
+       transition: background-color 0.3s ease, transform 0.2s ease;
+       }
+
+     .inquiry-section button:hover {
+     background-color: #45a049;
+     transform: translateY(-2px);
+     }
+
+       .inquiry-section button:active {
+       transform: translateY(0);
+      }
+
+   .footer {
+            background-color:  rgba(255, 255, 255, 0.9);
+            color: rgb(61, 3, 41);
+            text-align: center;
+            padding: 0.1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+   <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(to right, #1a1a1a, #333333);">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="C:\Users\ASUS\Desktop\practical\icon.png" alt="Dev Om Group Icon" class="rounded-circle" style="width: 45px; height: px; margin-right: 12px; border: 2px solid #fff; box-shadow: 0 0 10px rgba(255,255,255,0.2);">
+            <span style="font-size: 1.5rem; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Dev Om Group</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 mx-1 rounded hover-effect" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 mx-1 rounded hover-effect" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 mx-1 rounded hover-effect" href="#inventory">Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 mx-1 rounded hover-effect" href="#inquiry">Inquiry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2 mx-1 rounded hover-effect" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+              
+          <section class="hero-section d-flex align-items-center" id="home">
+    <div class="container">
+        <div class="row">
+            <!-- Left side with existing content -->
+            <div class="col-md-6 text-center">
+                <h1 class="display-3 mb-4">Welcome to Dev Om Group</h1>
+                <p class="lead mb-4">Your Trusted Property Partner in Bahadurgarh</p>
+                <p class="mb-4">Led by Mr. Naveen Rathee</p>
+                <a href="#contact" class="btn btn-light btn-lg">Contact Us</a>
+            </div>
+            
+            <!-- Right side with bulletin board -->
+            <div class="col-md-6">
+                <div class="card bg-dark bg-opacity-75 text-white" style="transform: perspective(1000px) rotateY(5deg); transition: transform 0.3s ease;">
+                    <div class="card-header" style="background: linear-gradient(45deg, #1a1a1a, #333);">
+                        <h3 class="text-center mb-0" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Latest Updates</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3" style="transition: transform 0.2s ease; cursor: pointer" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                                <i class="fas fa-star text-warning me-2" style="animation: pulse 2s infinite"></i>
+                                New luxury villas available in Sector-37
+                            </li>
+                            <li class="mb-3" style="transition: transform 0.2s ease; cursor: pointer" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                                <i class="fas fa-star text-warning me-2" style="animation: pulse 2s infinite"></i>
+                                Special offers on commercial plots
+                            </li>
+                            <li class="mb-3" style="transition: transform 0.2s ease; cursor: pointer" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                                <i class="fas fa-star text-warning me-2" style="animation: pulse 2s infinite"></i>
+                                Premium residential plots in HL City
+                            </li>
+                            <li class="mb-3" style="transition: transform 0.2s ease; cursor: pointer" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                                <i class="fas fa-star text-warning me-2" style="animation: pulse 2s infinite"></i>
+                                New studio apartments near Commercial Zone.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- About Section -->
+   <section class="about-section" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Section -->
+            <div class="col-md-6">
+                <div class="about-card">
+                    <h2 class="mb-4">About Dev Om Group</h2>
+                    <p>Dev Om Group is a leading property dealing firm specializing in real estate transactions in Bahadurgarh's Majorly. Under the expert guidance of Mr. Naveen Rathee, we have established ourselves as a trusted name in the real estate industry.</p>
+                    <p>With years of experience and deep market knowledge, we help our clients make informed decisions about their property investments. Our commitment to transparency, integrity, and client satisfaction sets us apart in the real estate sector.</p>
+                    <p>We help you out to make the complex process of Sale, Purchase, and Rent easy for you, which actually helps you to get a better deal in the market at the correct instance of the time.</p>
+                    <div class="mt-4">
+                        <h4>Our Leadership</h4>
+                        <p><strong>Mr. Jagvinder Singh</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Images Section -->
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="C:\Users\ASUS\Desktop\practical\home2.png" style="width: 119%; height: auto; display: block; margin: 0 auto;" class="square-border-img">
+                        <p style="text-align: center;">Mr. Naveen Rathee</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="C:\Users\ASUS\Desktop\practical\home.png" style="width: 120%; height: auto; display: block; margin: 0 auto;" class="square-border-img">
+                        <p style="text-align: center;">Mr. Jagvinder Singh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            </div>
+        </div>
+
+         <!-- Updated Inventory section with more categories -->
+      <div class="inventory-section" id="inventory">
+            <h2>Our Inventory</h2>
+
+        <div class="property-category">
+    <h3>Luxury Villas</h3>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\villa.jpg" alt="Premium Villa">
+            <h4>Premium Villa</h4>
+            <div class="property-details">
+                <p>Location: Sector-37, HL City</p>
+                <p>Area: 180 sq yards</p>
+                <p>5 Bedrooms | 4 Bathrooms</p>
+                <p>Modern Kitchen | Parking </p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\villa.jpg" alt="Garden villa">
+
+            <h4>Premium Villa Phase 2</h4>
+            <div class="property-details">
+                <p>Location: Sector-37, HL City</p>
+                <p>Area: 173 sq yards</p>
+                <p>5 Bedrooms | 4 Bathrooms</p>
+                <p>Modular Kitchen | Parking</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="property-category">
+    <h3>Plots</h3>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\plot.webp" alt="Residential Plot">
+>
+            <h4>Residential Plot</h4>
+            <div class="property-details">
+                <p>Location: Sector-37</p>
+                <p>Area: Starting from 88 sq yards</p>
+                <p>Corner Plot</p>
+                <p>Park Facing</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\plot.webp" alt="Commercial Plot">
+>
+
+            <h4>Commercial SCO</h4>
+            <div class="property-details">
+                <p>Location: Main Road</p>
+                <p>Area: Starting From 38 sq yards</p>
+                <p>Prime Location</p>
+                <p>All Utilities Available</p>
+            </div>
+        </div>
+         <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\plot.webp" alt="Commercial Plot">
+>
+
+            <h4>Milk Booth</h4>
+            <div class="property-details">
+                <p>Location: Main Road</p>
+                <p>Area: Starting From 33 , 196 sq yards</p>
+                <p>Prime Location</p>
+                <p>All Utilities Available</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="property-category">
+    <h3>Independent Floors</h3>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\floors2.jpg" alt="First Floor">
+
+
+            <h4>HL Floor</h4>
+            <div class="property-details">
+                <p>Location: Near Fawara Chowk</p>
+                <p>Area: 180 sq yards</p>
+                <p>3 Bedrooms | 2 Bathrooms</p>
+                <p>Parking | 24x7 Security</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\floors.jpg" alt="Ground Flooe">
+
+            <h4>Builder Floor</h4>
+            <div class="property-details">
+                <p>Location: HL City</p>
+                <p>Area: 138 sq yards</p>
+                <p>3 Bedrooms | 2 Bathrooms</p>
+                <p>Front & Back lobby</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="property-category">
+    <h3>Studio Apartments</h3>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\apartment.jpg" alt="Modern Apartment">
+         <h4>Modern Studio</h4>
+            <div class="property-details">
+                <p>Location: Sector-37</p>
+                <p>Area: 262 asq Feet</p>
+                <p>Fully Furnished</p>
+                <p>Ideal for Family</p>
+                 <p>For Rent</p>
+
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\apartment2.jpg" alt="Compact Studio">
+
+            <h4>Compact Studio</h4>
+            <div class="property-details">
+                <p>Location: Near commercial</p>
+                <p>Area: 262 sq Feet</p>
+                <p>Fully-Furnished</p>
+                <p>Ready to Move</p>
+                 <p>For Sale</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="property-category">
+    <h3>Commercial Shops</h3>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\shop.jpg" alt="Mall Shop">
+
+
+            <h4>Mall Shop</h4>
+            <div class="property-details">
+                <p>Location: Market Area</p>
+                <p>Area: 52 sq yards</p>
+                <p>Ground Floor</p>
+                <p>High Footfall Area</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="C:\Users\ASUS\Desktop\practical\shop2.jpg" alt="Corner Shop">
+            <h4>Commercial Shop</h4>
+            <div class="property-details">
+                <p>Location: HL City Market</p>
+                <p>Area: 35 Sq yards</p>
+                <p>Double Height</p>
+                <p>Main Road Facing</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+             
+       <div class="inquiry-section" id="inquiry">
+    <h2> Submit Your Inquiry</h2>
+    <!-- Embed the Google Form here -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemhN6V5Pk8PY6ODm20ajJJIDF8zwqrFcNO-Lbov85V9ewakQ/viewform " width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+
+           
+
+
+      <div class="contact-section" id="contact" style="background-color: #2E2E2E; padding: 40px 0;">
+    <h2 style="text-align: center; color: #E6E6FA; font-size: 36px;">Contact Us</h2>
+    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+
+        <!-- Consultant Info -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-user-tie" style="color: #E6E6FA; font-size: 24px; margin-right: 10px;"></i>
+            <p style="font-size: 18px; font-weight: bold; color: #f4f4f4;">
+                <span style="color:#E6E6FA;">Consultant :</span> Mr. Jagvinder Singh
+            </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-phone-alt" style="color: #E6E6FA; font-size: 24px; margin-right: 10px;"></i>
+            <p style="font-size: 18px; color: #f4f4f4;">
+                <span style="color:#E6E6FA;">Contact :</span> 90344 27539
+            </p>
+        </div>
+
+        <!-- Email Info -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-envelope" style="color: #E6E6FA; font-size: 24px; margin-right: 10px;"></i>
+            <p style="font-size: 18px; color: #f4f4f4;">
+                <span style="color:#E6E6FA;">Email :</span> 
+                <a href="mailto:devomgroup25@gmail.com" style="color: #4CAF50;">devomgroup25@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Address Info -->
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-map-marker-alt" style="color: #E6E6FA; font-size: 24px; margin-right: 10px;"></i>
+            <p style="font-size: 18px; color: #f4f4f4;">
+                <span style="color:#E6E6FA;">Head Office :</span> Shop No. 16, Ground Floor, Near Fawara Chowk, HL City, Sector-37, Bahadurgarh 124507
+            </p>
+                   </div>
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-map-marker-alt" style="color: #E6E6FA; font-size: 24px; margin-right: 10px;"></i>
+            <p style="font-size: 18px; color: #f4f4f4;">
+               
+            <span style="color:#E6E6FA;">Branch Office:</span> SCO-1, Phase 4 , Asha City, Sec- 36 , Bahadurgarh 124507
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Include Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+      <div style="display: flex; gap: 30px; justify-content: center; margin-top: 30px;">
+
+    <!-- Instagram Link -->
+    <a href="https://www.instagram.com/devomgroup/" target="_blank" style="text-decoration: none; color: #E6E6FA; font-size: 20px; display: flex; align-items: center; transition: transform 0.3s ease;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 35px; height: 35px; vertical-align: middle; margin-right: 10px; transition: transform 0.3s ease;">
+        <span style="font-weight: bold;">Instagram</span>
+    </a>
+
+    <!-- YouTube Link -->
+    <a href="https://www.youtube.com/@DEVOM-nj7lw/videos" target="_blank" style="text-decoration: none; color: #E6E6FA; font-size: 20px; display: flex; align-items: center; transition: transform 0.3s ease;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="width: 35px; height: 35px; vertical-align: middle; margin-right: 10px; transition: transform 0.3s ease;">
+        <span style="font-weight: bold;">YouTube</span>
+
+         <a href="https://www.facebook.com/profile.php?id=100092694815373" target="_blank" style="text-decoration: none; color: #E6E6FA; font-size: 20px; display: flex; align-items: center; transition: transform 0.3s ease;">
+        <img src="C:\Users\ASUS\Desktop\practical\fb icon.webp" alt="YouTube" style="width: 35px; height: 35px; vertical-align: middle; margin-right: 10px; transition: transform 0.3s ease;">
+        <span style="font-weight: bold;">Facebook</span>
+
+
+    </a>
+</div>
+<p align="center" style="color: white;">For inquiries, feel free to contact us via phone or email</p>
+
+<!-- Add Hover Effects -->
+<style>
+    a:hover {
+        transform: translateY(-5px);
+        color: #4CAF50;
+    }
+
+    a:hover img {
+        transform: scale(1.1);
+    }
+</style>
+
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        
+      
+
+         <div class="footer">
+        <p>&copy; 2025 Dev Om Group. All rights reserved.</p>
+    </div>
+
+    </section>
+
+   </body>
+</html>
